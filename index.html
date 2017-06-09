@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <Title>Smile File</Title>
+ <h1>Customer Happiness Survey</h1>
+ <h2>How was your shopping experience today?</h2>
+<style>
+
+  
+body {
+	background: #e6e6e6;
+}
+
+.control-group {
+	display: inline-block; 
+	width: 200px;
+	height: 210px;
+	margin: 10px;
+	padding: 30px;
+	text-align: left;
+	vertical-align: top; 
+	background: #fff;
+	box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+
+.control {
+	font-size: 38px;
+	position: relative;
+	display: block;
+	margin-bottom: 15px;
+	padding-left: 30px;
+	cursor: pointer;
+}
+
+.control input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.control__indicator {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	background: #e6e6e6;
+}
+
+.control--radio .control__indicator {
+	border-radius: 50%;
+}
+
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+	background: #ccc;
+}
+.control input:checked ~ .control__indicator {
+	background: #FF8C00;
+}
+
+    </style> . 
+
+    
+ 
+</head>  
+<body>
+  
+<div class="control-group">
+	
+	<label class="control control--radio">Good
+		<input type="radio" name="radio" checked="checked"/>
+		<div class="control__indicator"></div>
+	</label>
+	<label class="control control--radio">Satisfactory
+		<input type="radio" name="radio"/>
+		<div class="control__indicator"></div>
+	</label>
+	<label class="control control--radio">Bad
+		<input type="radio" name="radio2" disabled="disabled"/>
+		<div class="control__indicator"></div>
+	</label>
+</div>  
+
+
+</body>
