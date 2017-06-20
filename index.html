@@ -1,87 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
- <Title>Smile File</Title>
- <h1>Customer Happiness Survey</h1>
- <h2>How was your shopping experience today?</h2>
 <style>
-
-  
+	* {
+		font-family: SainsburysSlabBold,helvetica,sans-serif;
+		padding: 0;
+		margin: 0;
+	}
 body {
-	background: #e6e6e6;
+  /* background: gainsboro; */
+}
+
+h1 {
+	  font-size: 6em;
+		padding-bottom: .3em;
+		padding-top: 0.5em;
+}
+
+h2 {
+	font-size: 3em;
+	padding-bottom: 1em;
+	padding-top: 0.5em;
+}
+
+header {
+	      
+				text-align: center;
+				padding-top: 1em;
 }
 
 .control-group {
-	display: inline-block; 
-	width: 200px;
-	height: 210px;
-	margin: 10px;
-	padding: 30px;
-	text-align: left;
-	vertical-align: top; 
+	width: 90%;
+	margin: 0 auto;
+	padding: 3em;
 	background: #fff;
-	box-shadow: 0 1px 2px rgba(0,0,0,.1);
+	/* box-shadow: 0 1px 2px rgba(0,0,0,.1); */
+	text-align: center;
 }
 
-.control {
-	font-size: 38px;
-	position: relative;
+.control-group div {
+	margin: 0 3em;
+	display: inline-block;
+}
+
+.control-group div button {
+	font-size: 3em;
+	display: inline-block;
 	display: block;
-	margin-bottom: 15px;
-	padding-left: 30px;
-	cursor: pointer;
-}
-
-.control input {
-	position: absolute;
-	z-index: -1;
-	opacity: 0;
-}
-
-.control__indicator {
-	position: absolute;
-	top: 2px;
-	left: 0;
-	width: 20px;
-	height: 20px;
-	background: #e6e6e6;
-}
-
-.control--radio .control__indicator {
 	border-radius: 50%;
+	height: 150px;
+	width: 150px;
 }
 
-.control:hover input ~ .control__indicator,
-.control input:focus ~ .control__indicator {
-	background: #ccc;
-}
-.control input:checked ~ .control__indicator {
-	background: #FF8C00;
+.great {
+
+background:green;
 }
 
-    </style> . 
+.ok-good {
+	background: gold;
+}
 
-    
- 
+.not-good {
+	background:red;
+}
+
+.done {
+	background:#99bbff;
+}
+
+footer {
+     text-align: center;	
+		 padding-top: 4em;
+}
+
+p {
+	font-size: 1.5em;
+
+}
+
+
+
+</style>  
 </head>  
 <body>
-  
-<div class="control-group">
-	
-	<label class="control control--radio">Good
-		<input type="radio" name="radio" checked="checked"/>
-		<div class="control__indicator"></div>
-	</label>
-	<label class="control control--radio">Satisfactory
-		<input type="radio" name="radio"/>
-		<div class="control__indicator"></div>
-	</label>
-	<label class="control control--radio">Bad
-		<input type="radio" name="radio2" disabled="disabled"/>
-		<div class="control__indicator"></div>
-	</label>
-</div>  
+<header>
+<h1>Customer Happiness Survey</h1>	
+</header>
+<section class="control-group">
+	<h2> How was your shopping experience today?	</h2>
 
-
+	<div>
+		<button class="great">Great</button>
+	</div>
+	<div>
+		<button class="ok-good">Ok</button>
+	</div>
+	<div>
+		<button class="not-good">Bad</button>
+	</div>
+</section>
+<section class="control-group">
+	<h2>Select your Age Range</h2>
+	<div>
+		<button class="demographic">15-20</button>
+	</div>
+	<div>
+		<button class="demographic">21-35</button>
+	</div>
+	<div>
+		<button class="demographic">36+</button>
+	</div>
+</section>
+	<footer>
+		<section class="control-group">
+	<div>
+		<button class="done">Done</button>
+	</div>
+	</section>
+		 <p>Terms and Conditions</p>
+	</footer>
 </body>
